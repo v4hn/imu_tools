@@ -31,18 +31,22 @@
 #ifndef RVIZ_IMU_PLUGIN_IMU_DISPLAY_H
 #define RVIZ_IMU_PLUGIN_IMU_DISPLAY_H
 
+#include <sensor_msgs/Imu.h>
+
+#ifndef Q_MOC_RUN
 #include <message_filters/subscriber.h>
 #include <tf/message_filter.h>
-#include <sensor_msgs/Imu.h>
+#include <tf/transform_listener.h>
+#endif
+
+#include <OGRE/OgreSceneNode.h>
+#include <OGRE/OgreSceneManager.h>
+
 #include <rviz/display.h>
 #include <rviz/visualization_manager.h>
 #include <rviz/properties/property.h>
 #include <rviz/frame_manager.h>
 #include <rviz/message_filter_display.h>
-#include <OGRE/OgreSceneNode.h>
-#include <OGRE/OgreSceneManager.h>
-#include <tf/transform_listener.h>
-
 #include <rviz/properties/bool_property.h>
 #include <rviz/properties/float_property.h>
 #include <rviz/properties/color_property.h>
